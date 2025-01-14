@@ -9,6 +9,6 @@ results_gdp <- Pract_data |> filter(life_expectancy > 75) |> group_by(continent)
 
 write_csv(data_gdp, file = "gdp_continent.csv")
 
-Pract_data |> ggplot() +aes(year, gdp) + geom_point()
-
+gdp_graph <- Pract_data |> ggplot() +aes(year, gdp) + geom_point()
+ggsave(gdp_grapgh)
 
